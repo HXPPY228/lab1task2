@@ -30,6 +30,19 @@ private:
     QLineEdit *xInput, *yInput;
 };
 
+class InputDialogKv : public QDialog
+{
+    Q_OBJECT
+
+public:
+    explicit InputDialogKv(QWidget *parent = nullptr);
+
+    int getX();
+
+private:
+    QLineEdit *xInput;
+};
+
 class Mnogougolnik : public QWidget
 {
 
@@ -48,6 +61,12 @@ protected:
     void paintEvent(QPaintEvent *) override;
 };
 
+class Kvadrat : public Pryamougolnik
+{
+protected:
+    void paintEvent(QPaintEvent *) override;
+};
+
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -60,13 +79,15 @@ public:
 private slots:
     void on_pryamougol_clicked();
 
+    void on_kvadrat_clicked();
+
 protected:
     void paintEvent(QPaintEvent *) override;
 
 private:
     Ui::MainWindow *ui;
-    bool drawRectangle;
-    int x,y;
+    bool drawRectangle, drawKvadrat;
+    int x,y,xkv;
 
 };
 
