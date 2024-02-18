@@ -8,7 +8,7 @@
 #include <QDialog>
 #include <QLineEdit>
 #include <QVBoxLayout>
-
+#include <QString>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -22,7 +22,6 @@ class InputDialog : public QDialog
 
 public:
     explicit InputDialog(QWidget *parent = nullptr);
-    ~InputDialog();
 
     int getX();
     int getY();
@@ -33,6 +32,7 @@ private:
 
 class Mnogougolnik : public QWidget
 {
+
 protected:
     Q_OBJECT
 };

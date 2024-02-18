@@ -19,18 +19,23 @@ InputDialog::InputDialog(QWidget *parent) :
     xInput(new QLineEdit(this)),
     yInput(new QLineEdit(this))
 {
-    QVBoxLayout *layout = new QVBoxLayout(this);
-    layout->addWidget(xInput);
-    layout->addWidget(yInput);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+
+    QHBoxLayout *xLayout = new QHBoxLayout;
+    QLabel *xLabel = new QLabel("Введите значение x в пикселях: ", this);
+    xLayout->addWidget(xLabel);
+    xLayout->addWidget(xInput);
+    mainLayout->addLayout(xLayout);
+
+    QHBoxLayout *yLayout = new QHBoxLayout;
+    QLabel *yLabel = new QLabel("Введите значение y в пикселях: ", this);
+    yLayout->addWidget(yLabel);
+    yLayout->addWidget(yInput);
+    mainLayout->addLayout(yLayout);
 
     QPushButton *button = new QPushButton("OK", this);
     connect(button, SIGNAL(clicked()), this, SLOT(accept()));
-    layout->addWidget(button);
-}
-
-InputDialog::~InputDialog()
-{
-
+    mainLayout->addWidget(button);
 }
 
 int InputDialog::getX()
@@ -48,8 +53,10 @@ void MainWindow::paintEvent(QPaintEvent *)
     if(drawRectangle)
     {
     QPainter painter(this);
-    QRect wRect (600-x/2,450-y/2-100,x,y);
+    QRect wRect (600-x/2,350-y/2,x,y);
     painter.fillRect(wRect, Qt::green);
+    QRect rRect (wRect.x()+wRect.width()/2,wRect.y()+wRect.height()/2,x/100,y/100);
+    painter.fillRect(rRect, Qt::red);
     }
 }
 
@@ -62,8 +69,10 @@ void MainWindow::on_pryamougol_clicked()
         x = dialog.getX();
         y = dialog.getY();
     }
-        this->update();
-
+    this->update();
+    QString S = QString::number(x*y);
+    QString P = QString::number((x+y)*2);
+    ui->label_2->setText("Площадь в пикселях: " + S + ". Периметр в пикселях: " + P + ". Центр масс помечен красной точкой.");
 }
 
 
