@@ -16,32 +16,6 @@ class MainWindow;
 }
 QT_END_NAMESPACE
 
-class InputDialog : public QDialog
-{
-    Q_OBJECT
-
-public:
-    explicit InputDialog(QWidget *parent = nullptr);
-
-    int getX();
-    int getY();
-
-private:
-    QLineEdit *xInput, *yInput;
-};
-
-class InputDialogKv : public QDialog
-{
-    Q_OBJECT
-
-public:
-    explicit InputDialogKv(QWidget *parent = nullptr);
-
-    int getX();
-
-private:
-    QLineEdit *xInput;
-};
 
 class Mnogougolnik : public QWidget
 {
@@ -53,18 +27,6 @@ protected:
 class IV_ugolnik : public Mnogougolnik
 {
 
-};
-
-class Pryamougolnik : public IV_ugolnik
-{
-protected:
-    void paintEvent(QPaintEvent *) override;
-};
-
-class Kvadrat : public Pryamougolnik
-{
-protected:
-    void paintEvent(QPaintEvent *) override;
 };
 
 class MainWindow : public QMainWindow
@@ -87,11 +49,8 @@ protected:
 private:
     Ui::MainWindow *ui;
     bool drawRectangle, drawKvadrat;
-    int x,y,xkv;
+    int x=0,y=0,xkv=0;
 
 };
-
-
-
 
 #endif // MAINWINDOW_H

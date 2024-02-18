@@ -9,11 +9,15 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    kvadrat.cpp \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    pryamougolnik.cpp
 
 HEADERS += \
-    mainwindow.h
+    kvadrat.h \
+    mainwindow.h \
+    pryamougolnik.h
 
 FORMS += \
     mainwindow.ui
