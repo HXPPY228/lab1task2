@@ -39,14 +39,19 @@ void MainWindow::on_pryamougol_clicked()
 {
     drawRectangle=true;
     drawKvadrat=false;
+    drawTreugol=false;
     InputDialog dialog(this);
     if (dialog.exec() == QDialog::Accepted)
     {
         x = dialog.getX();
         y = dialog.getY();
     }
+    if (x<=0||y<=0){
+        ui->label_2->setText("Ошибка!");
+    } else{
     this->update();
     QString S = QString::number(x*y);
     QString P = QString::number((x+y)*2);
     ui->label_2->setText("Площадь в пикселях: " + S + ". Периметр в пикселях: " + P + ". Центр масс помечен красной точкой.");
+}
 }

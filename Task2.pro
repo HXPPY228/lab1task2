@@ -12,12 +12,14 @@ SOURCES += \
     kvadrat.cpp \
     main.cpp \
     mainwindow.cpp \
-    pryamougolnik.cpp
+    pryamougolnik.cpp \
+    treugolnik.cpp
 
 HEADERS += \
     kvadrat.h \
     mainwindow.h \
-    pryamougolnik.h
+    pryamougolnik.h \
+    treugolnik.h
 
 FORMS += \
     mainwindow.ui

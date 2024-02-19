@@ -1,7 +1,6 @@
 #ifndef KVADRAT_H
 #define KVADRAT_H
 
-#include "mainwindow.h"
 #include "pryamougolnik.h"
 
 class InputDialogKv : public QDialog

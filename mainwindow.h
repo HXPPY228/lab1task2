@@ -9,6 +9,7 @@
 #include <QLineEdit>
 #include <QVBoxLayout>
 #include <QString>
+#include <QMouseEvent>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -22,6 +23,7 @@ class Mnogougolnik : public QWidget
 
 protected:
     Q_OBJECT
+
 };
 
 class IV_ugolnik : public Mnogougolnik
@@ -43,13 +45,15 @@ private slots:
 
     void on_kvadrat_clicked();
 
+    void on_treugol_clicked();
+
 protected:
     void paintEvent(QPaintEvent *) override;
 
 private:
     Ui::MainWindow *ui;
-    bool drawRectangle, drawKvadrat;
-    int x=0,y=0,xkv=0;
+    bool drawRectangle, drawKvadrat, drawTreugol;
+    int x=0,y=0,xkv=0,xtr=0;
 
 };
 

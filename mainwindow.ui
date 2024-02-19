@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1200</width>
-    <height>900</height>
+    <height>905</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,8 +17,8 @@
    <widget class="QPushButton" name="pryamougol">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>770</y>
+      <x>910</x>
+      <y>50</y>
       <width>121</width>
       <height>31</height>
      </rect>
@@ -30,9 +30,9 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>720</y>
-      <width>1201</width>
+      <x>920</x>
+      <y>10</y>
+      <width>231</width>
       <height>31</height>
      </rect>
     </property>
@@ -57,10 +57,19 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>10</y>
-      <width>1181</width>
+      <y>0</y>
+      <width>841</width>
       <height>51</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <italic>false</italic>
+      <bold>true</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
+      <kerning>true</kerning>
+     </font>
     </property>
     <property name="text">
      <string/>
@@ -69,8 +78,8 @@
    <widget class="QPushButton" name="kvadrat">
     <property name="geometry">
      <rect>
-      <x>150</x>
-      <y>770</y>
+      <x>1050</x>
+      <y>50</y>
       <width>121</width>
       <height>31</height>
      </rect>
@@ -79,6 +88,152 @@
      <string>Квадрат</string>
     </property>
    </widget>
+   <widget class="Line" name="line">
+    <property name="geometry">
+     <rect>
+      <x>822</x>
+      <y>0</y>
+      <width>81</width>
+      <height>861</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Vertical</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="treugol">
+    <property name="geometry">
+     <rect>
+      <x>910</x>
+      <y>90</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Треугольник</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="krug">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>90</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Круг</string>
+    </property>
+   </widget>
+   <widget class="Line" name="line_2">
+    <property name="geometry">
+     <rect>
+      <x>-10</x>
+      <y>50</y>
+      <width>871</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="romb">
+    <property name="geometry">
+     <rect>
+      <x>910</x>
+      <y>130</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Ромб</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="zvezda">
+    <property name="geometry">
+     <rect>
+      <x>1050</x>
+      <y>130</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Звезда</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="shestiugol">
+    <property name="geometry">
+     <rect>
+      <x>910</x>
+      <y>170</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Шестиугольник</string>
+    </property>
+   </widget>
+   <widget class="QUndoView" name="undoView">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>-10</y>
+      <width>341</width>
+      <height>901</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QUndoView" name="undoView_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>861</width>
+      <height>61</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QMdiArea" name="mdiArea">
+    <property name="geometry">
+     <rect>
+      <x>860</x>
+      <y>-11</y>
+      <width>341</width>
+      <height>961</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QMdiArea" name="mdiArea_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>861</width>
+      <height>61</height>
+     </rect>
+    </property>
+   </widget>
+   <zorder>undoView_2</zorder>
+   <zorder>mdiArea_2</zorder>
+   <zorder>undoView</zorder>
+   <zorder>mdiArea</zorder>
+   <zorder>pryamougol</zorder>
+   <zorder>label</zorder>
+   <zorder>label_2</zorder>
+   <zorder>kvadrat</zorder>
+   <zorder>line</zorder>
+   <zorder>treugol</zorder>
+   <zorder>krug</zorder>
+   <zorder>line_2</zorder>
+   <zorder>romb</zorder>
+   <zorder>zvezda</zorder>
+   <zorder>shestiugol</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

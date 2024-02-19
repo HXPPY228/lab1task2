@@ -27,13 +27,18 @@ void MainWindow::on_kvadrat_clicked()
 {
     drawKvadrat=true;
     drawRectangle=false;
+    drawTreugol=false;
     InputDialogKv dialog(this);
     if (dialog.exec() == QDialog::Accepted)
     {
         xkv = dialog.getX();
     }
+    if (xkv<=0){
+        ui->label_2->setText("Ошибка!");
+    } else{
     this->update();
     QString S = QString::number(xkv*xkv);
     QString P = QString::number((xkv+xkv)*2);
     ui->label_2->setText("Площадь в пикселях: " + S + ". Периметр в пикселях: " + P + ". Центр масс помечен красной точкой.");
-}
+    }
+    }
